@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.LoginActivity">
+    <children>
+        <GridPane layoutX="204.0" layoutY="200.0" prefHeight="99.0" prefWidth="393.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="226.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="369.0" minWidth="10.0" prefWidth="324.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="usernameLBL" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="225.0" text="Username">
+                    <padding>
+                        <Insets right="10.0" />
+                    </padding></Label>
+                <Label fx:id="passwordLBL" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="224.0" text="Password" GridPane.rowIndex="1">
+                    <padding>
+                        <Insets right="10.0" />
+                    </padding></Label>
+                <TextField fx:id="userNameTF" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" />
+                <PasswordField fx:id="passwordPF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button fx:id="loginLBL" mnemonicParsing="false" onAction="#onActCheckLogin" text="Login" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+        <Label fx:id="pleaseEnterLBL" alignment="CENTER" layoutX="172.0" layoutY="132.0" text="Please enter your user name and password." textAlignment="CENTER" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+            <font>
+                <Font name="Candara" size="14.0" />
+            </font></Label>
+        <HBox layoutX="386.0" layoutY="354.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.rightAnchor="20.0">
+            <children>
+                <Label fx:id="locationLBL" text="Location:" />
+                <Label fx:id="locationIDLBL" text="Label">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                </Label>
+            </children>
+        </HBox>
+        <Label fx:id="welcomeLBL" alignment="CENTER" layoutX="52.0" layoutY="83.0" text="Welcome to the Client Scheduler" textAlignment="CENTER" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+            <font>
+                <Font name="Candara" size="36.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

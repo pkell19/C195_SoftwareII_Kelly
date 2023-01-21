@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AppointmentList">
+    <Label alignment="TOP_CENTER" layoutX="397.0" layoutY="14.0" text="Appointment List">
+        <font>
+            <Font name="Meiryo" size="24.0" />
+        </font>
+    </Label>
+    <HBox layoutX="1.0" layoutY="60.0" prefHeight="40.0" spacing="50.0" style="-fx-background-color: #36454f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <children>
+            <Button mnemonicParsing="false" onAction="#onActionToMainMenu" prefWidth="150.0" text="Main Menu">
+                <HBox.margin>
+                    <Insets top="7.0" />
+                </HBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#onActionToCustomer" prefWidth="150.0" text="Customers">
+                <HBox.margin>
+                    <Insets top="7.0" />
+                </HBox.margin></Button>
+            <Button layoutX="230.0" layoutY="17.0" mnemonicParsing="false" onAction="#onActionToReport" prefWidth="150.0" text="Reports">
+                <HBox.margin>
+                    <Insets top="7.0" />
+                </HBox.margin></Button>
+         <TextField fx:id="apptSearch" prefHeight="25.0" prefWidth="264.0" promptText="Search">
+            <HBox.margin>
+               <Insets top="7.0" />
+            </HBox.margin>
+         </TextField>
+        </children>
+        <padding>
+            <Insets left="20.0" right="20.0" />
+        </padding>
+    </HBox>
+    <TableView fx:id="apptListTableView" layoutX="13.0" layoutY="149.0" prefHeight="376.0" prefWidth="1160.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="149.0">
+        <columns>
+            <TableColumn fx:id="apptIdCol" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="Appt ID" />
+            <TableColumn fx:id="apptTitleCol" maxWidth="300.0" minWidth="180.0" prefWidth="180.0" text="Title" />
+            <TableColumn fx:id="apptDescriptionCol" maxWidth="350.0" minWidth="250.0" prefWidth="250.0" text="Description" />
+            <TableColumn fx:id="apptLocationCol" maxWidth="200.0" minWidth="150.0" prefWidth="150.0" text="Location" />
+            <TableColumn fx:id="apptTypeCol" maxWidth="150.0" minWidth="100.0" prefWidth="100.0" text="Type" />
+            <TableColumn fx:id="apptStartTimeCol" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Start Time" />
+            <TableColumn fx:id="apptEndTimeCol" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="End Time" />
+            <TableColumn fx:id="apptCustomerIdCol" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="Cust ID" />
+            <TableColumn fx:id="apptUserIdCol" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="User ID" />
+            <TableColumn fx:id="apptContactIdCol" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" text="Contact ID" />
+        </columns>
+    </TableView>
+    <ButtonBar buttonMinWidth="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <buttons>
+            <Button mnemonicParsing="false" onAction="#toUpdateAppt" style="-fx-background-color: #36454f;" text="Modify" textFill="#f5f5f5">
+                <font>
+                    <Font name="Arial Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#toNewAppt" style="-fx-background-color: #36454f;" text="New" textFill="#f5f5f5">
+                <font>
+                    <Font name="Arial Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#deleteAppt" style="-fx-background-color: #36454f;" text="Delete" textFill="#f5f5f5">
+                <font>
+                    <Font name="Arial Bold" size="12.0" />
+                </font>
+            </Button>
+        </buttons>
+        <opaqueInsets>
+            <Insets />
+        </opaqueInsets>
+        <effect>
+            <DropShadow blurType="TWO_PASS_BOX" />
+        </effect>
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+        </padding>
+    </ButtonBar>
+    <HBox layoutX="42.0" layoutY="110.0" prefHeight="27.0" prefWidth="410.0">
+        <children>
+            <RadioButton id="apptListView" fx:id="rbtnWeekView" mnemonicParsing="false" text="This Week">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <toggleGroup>
+                    <ToggleGroup fx:id="apptListViewTG" />
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton id="apptListView" fx:id="rbtnMonthView" mnemonicParsing="false" text="This Month" toggleGroup="$apptListViewTG">
+                <padding>
+                    <Insets left="50.0" />
+                </padding>
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </RadioButton>
+            <RadioButton id="apptListView" fx:id="rbtnAllAppts" layoutX="87.0" layoutY="10.0" mnemonicParsing="false" selected="true" text="All" toggleGroup="$apptListViewTG">
+                <padding>
+                    <Insets left="50.0" />
+                </padding>
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </RadioButton>
+        </children>
+    </HBox>
+</AnchorPane>

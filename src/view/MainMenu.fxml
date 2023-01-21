@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.MainMenu">
+    <children>
+        <Label layoutX="23.0" layoutY="14.0" text="Welcome to the Client Scheduler">
+            <font>
+                <Font name="Ebrima Bold" size="36.0" />
+            </font>
+        </Label>
+        <VBox alignment="CENTER" layoutX="289.0" layoutY="100.0" prefHeight="277.0" prefWidth="271.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0">
+            <children>
+                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openAppointmentList" prefWidth="200.0" text="Appointments" textAlignment="CENTER" textFill="#141414">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </VBox.margin>
+                    <effect>
+                        <Lighting>
+                            <bumpInput>
+                                <Shadow />
+                            </bumpInput>
+                            <light>
+                                <Light.Distant>
+                                    <color>
+                                        <Color red="0.9342105388641357" green="0.748233437538147" blue="0.37627923488616943" />
+                                    </color>
+                                </Light.Distant>
+                            </light>
+                        </Lighting>
+                    </effect>
+                </Button>
+                <Button alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="25.0" mnemonicParsing="false" onAction="#openCustomerList" prefWidth="200.0" text="Customers" textAlignment="CENTER" textFill="#141414">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <effect>
+                        <Lighting>
+                            <bumpInput>
+                                <Shadow />
+                            </bumpInput>
+                            <light>
+                                <Light.Distant>
+                                    <color>
+                                        <Color red="0.9342105388641357" green="0.748233437538147" blue="0.37627923488616943" />
+                                    </color>
+                                </Light.Distant>
+                            </light>
+                        </Lighting>
+                    </effect>
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="87.0" mnemonicParsing="false" onAction="#openReportPage" prefWidth="200.0" text="Reports" textAlignment="CENTER" textFill="#141414">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <effect>
+                        <Lighting>
+                            <bumpInput>
+                                <Shadow />
+                            </bumpInput>
+                            <light>
+                                <Light.Distant>
+                                    <color>
+                                        <Color red="0.9342105388641357" green="0.748233437538147" blue="0.37627923488616943" />
+                                    </color>
+                                </Light.Distant>
+                            </light>
+                        </Lighting>
+                    </effect>
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="57.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" />
+    </children>
+</AnchorPane>
