@@ -92,6 +92,6 @@ public class ReportApptsByTypeMonth implements Initializable {
      * @param actionEvent The #onActionToReport button
      */
     public void onActToReports(ActionEvent actionEvent) throws IOException {
-        SceneMovements.goToPage(actionEvent, "ReportsList", 600, 400, "Appointment List");
+        SceneMovements.goToPage(actionEvent, "ReportsList", 600, 400, "Report List");
     }
 }
