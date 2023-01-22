@@ -1,22 +1,13 @@
 package controller;
 
-import dao.CustomerDAO;
 import dao.ReportsDAO;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-import model.Appointment;
-import model.Customer;
 import utilities.SceneMovements;
 
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
 /**
@@ -25,7 +16,6 @@ import java.util.ResourceBundle;
 public class ReportTotalCustomer implements Initializable {
 
     public Label totalCustomerLBL;
-    ObservableList <Customer> customerList = CustomerDAO.getAllCustomer();
 
     /**
      * Initializes the customer combo box with the customer list.

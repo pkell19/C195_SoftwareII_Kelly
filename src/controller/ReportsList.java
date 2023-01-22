@@ -12,7 +12,7 @@ public class ReportsList {
 
     /**
      * Opens the <code>ReportApptsByTypeMonth</code> fxml.
-     * @param actionEvent Pressing the # onActOpenApptByTypeMonthbutton
+     * @param actionEvent Pressing the # onActOpenApptByTypeMonth button
      */
     public void onActOpenApptByTypeMonth(ActionEvent actionEvent) throws IOException {
         SceneMovements.goToPage(actionEvent, "ReportApptsByTypeMonth", 600, 400, "Total Appointments By Type and Month");

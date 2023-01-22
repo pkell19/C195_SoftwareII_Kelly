@@ -112,7 +112,7 @@ public class NewAppt implements Initializable {
             LocalDateTime endDateTime = LocalDateTime.of(date, end);
 
 
-            if (title.isEmpty() | description.isEmpty() | location.isEmpty() | type.isEmpty() | date == null | start == null | end == null | customer == null | user == null | contact == null) {
+            if (title.isEmpty() | description.isEmpty() | location.isEmpty() | type.isEmpty() | newApptDatePicker == null | newApptStartCombo == null | newApptEndCombo == null | customer == null | user == null | contact == null) {
                 Alert alert = new Alert(Alert.AlertType.ERROR, "Please complete every field!", ButtonType.OK);
                 alert.setTitle("Every Field Must Be Completed");
                 alert.showAndWait();

@@ -7,8 +7,8 @@ reading and management of the data.
 
 Author: Patty Kelly
 Contact Information: pkell19@wgu.edu
-Application Version: Version 2.0
-Date: January 4th, 2023
+Application Version: Version 4.0
+Date: January 23th, 2023
 
 IDE and version number: IntelliJ Community 2021.1.3
 JDK Version: Java SE 11.0.4
@@ -22,8 +22,6 @@ create new entries. The Delete button removes existing entries in the database. 
 that provide a list of all appointments by type and month, a list of appointments by contact, and a list of appointments
 by customer.
 
-Report of this author's choice: The third report shows all appointments that are associated with the selected customer.
-The information provided includes the appointment title, type, description, date, and start and end
-times.
+Report of this author's choice: The third report shows the total number of customers in the database.
 
 MySQL Connector driver version number: mysql-connector-java-8.0.25
